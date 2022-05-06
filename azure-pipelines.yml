@@ -16,3 +16,10 @@ steps:
     pwd
     ls -ltr
   displayName: 'test step'
+
+- task: Docker@2
+  displayName: Build an image
+  inputs:
+    repository: backstage
+    command: build
+    Dockerfile: Dockerfile
